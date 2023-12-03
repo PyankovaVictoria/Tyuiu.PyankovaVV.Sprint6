@@ -1,7 +1,7 @@
 ﻿
 namespace Tyuiu.PyankovaVV.Sprint6.Task2.V14
 {
-    partial class Form1
+    partial class FormMain
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,18 @@ namespace Tyuiu.PyankovaVV.Sprint6.Task2.V14
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // FormMain
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "FormMain";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FormMain_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
