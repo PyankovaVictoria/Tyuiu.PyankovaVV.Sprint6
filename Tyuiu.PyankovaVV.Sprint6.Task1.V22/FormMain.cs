@@ -18,32 +18,36 @@ namespace Tyuiu.PyankovaVV.Sprint6.Task1.V22
         {
             InitializeComponent();
         }
+
         DataService ds = new DataService();
 
-        private void buttonDone_Click(object sender, EventArgs e)
+        private void buttonDone_PVV_Click(object sender, EventArgs e)
         {
             try
             {
-                int startstep = Convert.ToInt32(textBoxStartStep.Text);
-                int stopstep = Convert.ToInt32(textBoxStopStep.Text);
+                int startValue = Convert.ToInt32(textBoxStart_PVV.Text);
+                int stopValue = Convert.ToInt32(textBoxStop_PVV.Text);
 
+                string strLine;
 
-                string str;
+                int len = ds.GetMassFunction(startValue, stopValue).Length;
 
-                int len = ds.GetMassFunction(startstep, stopstep).Length;
-                double[] func = new double[len];
-                func = ds.GetMassFunction(startstep, stopstep);
-                textBoxResult.Text = "";
-                textBoxResult.AppendText("+-----------------------+" + Environment.NewLine);
-                textBoxResult.AppendText("|     x    |    f(x)    |" + Environment.NewLine);
-                textBoxResult.AppendText("+-----------------------+" + Environment.NewLine);
-                for (int i = 0; i <= len - 1; i++)
+                double[] valueArray;
+                valueArray = new double[len];
+
+                valueArray = ds.GetMassFunction(startValue, stopValue);
+                textBoxResult_PVV.Text = "";
+                textBoxResult_PVV.AppendText("+----------+----------+" + Environment.NewLine);
+                textBoxResult_PVV.AppendText("|     x    |   f(x)   |" + Environment.NewLine);
+                textBoxResult_PVV.AppendText("+----------+----------+" + Environment.NewLine);
+
+                for (int i = 0; i<=len-1; i++)
                 {
-                    str = String.Format("| {0, 6:d}   | {1, 7:f2}    |", startstep, func[i]);
-                    textBoxResult.AppendText(str + Environment.NewLine);
-                    startstep++;
+                    strLine = String.Format("|{0,5:d}     | {1,7:f2}  |", startValue, valueArray[i]);
+                    textBoxResult_PVV.AppendText(strLine + Environment.NewLine);
+                    startValue++;
                 }
-                textBoxResult.AppendText("+-----------------------+" + Environment.NewLine);
+                textBoxResult_PVV.AppendText("+----------+----------+" + Environment.NewLine);
             }
             catch
             {
@@ -51,11 +55,9 @@ namespace Tyuiu.PyankovaVV.Sprint6.Task1.V22
             }
         }
 
-
-
-        private void buttonHelp_Click_Click(object sender, EventArgs e)
+        private void buttonInfo_PVV_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Таск 1 выполнил студент группы ИИПБ-23-2 Заргаров А. А.", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Таск 1, вариант 22 выполнила студент группы АСОиУб-23-2 Пьянкова Виктория Вячеславовна", "Справка", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
