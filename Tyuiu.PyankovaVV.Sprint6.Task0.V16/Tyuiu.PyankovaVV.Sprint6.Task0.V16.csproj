@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{015D0952-17CA-4F09-98E6-A2113CEA1B21}</ProjectGuid>
+    <ProjectGuid>{7D051394-F87A-4C6A-A5A2-5D6AD0C498F1}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Tyuiu.PyankovaVV.Sprint6.Task0.V16</RootNamespace>
     <AssemblyName>Tyuiu.PyankovaVV.Sprint6.Task0.V16</AssemblyName>
@@ -48,17 +48,14 @@
   <ItemGroup>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -81,6 +78,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tyuiu.PyankovaVV.Sprint6.Task0.V16.Lib\Tyuiu.PyankovaVV.Sprint6.Task0.V16.Lib.csproj">
+      <Project>{d5c0d873-6fff-4863-acdd-813d03a9789e}</Project>
+      <Name>Tyuiu.PyankovaVV.Sprint6.Task0.V16.Lib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

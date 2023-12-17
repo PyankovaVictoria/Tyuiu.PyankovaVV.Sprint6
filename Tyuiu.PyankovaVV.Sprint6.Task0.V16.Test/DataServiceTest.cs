@@ -9,7 +9,7 @@ namespace Tyuiu.PyankovaVV.Sprint6.Task0.V16.Test
     public class DataServiceTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void ValidCalc()
         {
             DataService ds = new DataService();
             double res = ds.Calculate(3);
