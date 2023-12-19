@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{79AB44FE-DD65-4F31-872D-26B3CEA1C468}</ProjectGuid>
+    <ProjectGuid>{7B8E4EDC-10F4-4844-8B4F-DB0879271F3B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Tyuiu.PyankovaVV.Sprint6.Task2.V14</RootNamespace>
     <AssemblyName>Tyuiu.PyankovaVV.Sprint6.Task2.V14</AssemblyName>
@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
