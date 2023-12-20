@@ -1,5 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+
+using System.IO;
+
 using Tyuiu.PyankovaVV.Sprint6.Task5.V4.Lib;
 
 namespace Tyuiu.PyankovaVV.Sprint6.Task5.V4.Test
@@ -10,7 +13,7 @@ namespace Tyuiu.PyankovaVV.Sprint6.Task5.V4.Test
         [TestMethod]
         public void TestMethod1()
         {
-            string path = @"C:\Users";
+            string path = @"C:\DataSprint6\InPutFileTask5V4.txt";
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
             bool wait = true;

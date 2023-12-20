@@ -16,7 +16,7 @@ namespace Tyuiu.PyankovaVV.Sprint6.Task5.V4
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FormMain());
         }
     }
 }
